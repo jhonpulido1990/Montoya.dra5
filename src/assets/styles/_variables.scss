@@ -1,0 +1,139 @@
+@use "sass:map";
+
+$colors: (
+    // === COLORES DE MARCA (BRANDING) ===
+    primary: #082c43,
+    // Azul prusia oscuro - color principal del consultorio
+    primary-light: #093956,
+    // Azul prusia claro - hover, barras, acentos
+    secondary: #1470a6,
+    // Azul medio - botones secundarios
+    accent: #00a896,
+    // Verde turquesa - frescura, salud, higiene bucal
+
+    // === NEUTROS: Texto y estructura ===
+    black1: #000000,
+    // Negro puro
+    black2: #0B0D39,
+    // Azul oscuro profundo (alternativo de contraste)
+    black3: #1F2937,
+    // Gris azulado oscuro - similar a slate-900
+
+    // === GRIS: Escala de textos y fondos suaves ===
+    gray0: #CBD5E1,
+    // Gris claro - similar a slate-300
+    gray1: #DBDBE6,
+    // Gris claro cálido
+    gray2: #DCDCE3,
+    // Gris muy claro
+    gray3: #CFE2DB,
+    // Verde claro muy sutil - fondos de cards o estados
+    gray4: #707070,
+    // Gris medio - texto secundario
+    gray5: #748F99,
+    // Gris azulado - subtítulos, detalles
+    gray6: #64748B,
+    // Gris medio oscuro - similar a slate-600
+    gray7: #475569,
+    // Gris oscuro - similar a muted-foreground
+    gray8: #94A3B8,
+    // Gris claro - similar a slate-400
+
+    // === BLANCOS: Fondos y superficies ===
+    white1: #FFFFFF,
+    // Blanco puro
+    white2: #FEFEFE,
+    // Blanco casi puro
+    white3: #F2F2F2,
+    // Gris muy claro - fondo de cards
+    bg-gray1: #ebe9e8,
+    // Platinum - fondo principal cálido y limpio
+    bg-gray2: #f8fafc,
+    // Fondo claro adicional - similar a slate-50
+
+    // === COLORES DE ESTADO (feedback) ===
+    success: #28a745,
+    // Verde médico - confirmaciones
+    error: #dc3545,
+    // Rojo suave - errores
+    warning: #ffc107,
+    // Ámbar - alertas
+    info: #17a2b8,
+    // Cyan suave - información
+
+    // === COLORES AZULES (Tailwind-like para consistencia) ===
+    blue400: #2a86b8,
+    // Texto azul claro - similar a text-blue-400
+    blue600: #1470a6,
+    // Azul acento - bg-blue-600, text-blue-600
+    blue700: #0c4a70,
+    // Azul más oscuro - hover:bg-blue-700
+
+    // === COLOR PERSONALIZADO ===
+    custom-cursor-blue: #3182ce,
+    // Azul para efectos de cursor o hover dinámico
+
+    // === COLORES BASE (originales del proyecto) ===
+    silver0: #c7c5c4,
+    // Gris plateado - bordes, detalles
+    platinum: #ebe9e8,
+    // Mismo que bg-gray1 - para referencia
+    dim-gray: #646c71 // Gris principal de texto - coherente con tu base
+);
+
+@function color($color-name) {
+  @if not map.has-key($colors, $color-name) {
+      @warn "El color `#{$color-name}` no existe en el mapa de colores.";
+    }
+  @return map.get($colors, $color-name);
+}
+
+// Breakpoints - Mobile First
+$mobile-small: 320px;
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-large: 1440px;
+$desktop-xl: 1920px;
+
+// Typography
+$font-size-title: 5.125rem; // 82px
+$font-size-text: 1.25rem; // 20px
+$font-size-sm: 0.875rem; // 14px
+$font-size-ultra-sm: 0.75rem; // 12px
+
+// Responsive typography
+$font-size-title-mobile: 2.5rem; // 40px
+$font-size-text-mobile: 1rem; // 16px
+
+// Layout
+$padding-box: 0 24px;
+$margin-box: 0px;
+$container-max-width: 1200px;
+
+// UI Elements
+$borderRadius: 12px;
+$borderRadius-sm: 6px;
+$borderRadius-lg: 16px;
+
+// Transitions
+$transitionDuration: 0.2s;
+$transitionEasing: ease-in-out;
+
+// Spacing scale (múltiplos de 8px)
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Z-index scale
+$z-dropdown: 1000;
+$z-modal: 1050;
+$z-tooltip: 1070;
+
+// PrimeNG compatibility (si los necesitas)
+/* $prime-mixins1: 992px;
+$prime-mixins2: 991px; */
+$scale: 14px;
