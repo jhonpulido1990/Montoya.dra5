@@ -65,16 +65,16 @@ export const myCustomPreset = definePreset(Aura, {
       950: '#7C2D12'
     },
     help: {
-      50: '#F0F9FF',
-      100: '#E0F2FE',
-      200: '#BAF0FC',
-      300: '#7DD5F8',
-      400: '#1BB7F1',
-      500: '#0EA5E9',
-      600: '#0C8DE3',
-      700: '#0B7DD4',
-      800: '#1D4ED8',
-      950: '#1E40AF'
+      50: '#DFF5F0',
+      100: '#C0EAE0',
+      200: '#A0DECF',
+      300: '#7FD2BF',
+      400: '#4FB8A0',
+      500: '#00A896', // 🌿 Verde turquesa – fresco, de ayuda
+      600: '#008F80',
+      700: '#00766C',
+      800: '#005F59',
+      950: '#004743'
     },
     danger: {
       50: '#FEF2F2',
