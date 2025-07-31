@@ -1,0 +1,7 @@
+div {
+  display: grid;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+}
